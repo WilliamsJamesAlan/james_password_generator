@@ -33,6 +33,16 @@ function generatePassword() {
   // THEN a password is generated that matches the selected criteria
   // WHEN the password is generated
   // THEN the password is either displayed in an alert or written to the page
+  const alpha = "abcdefghijklmnopqrstuvwxyz";
+  const Alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numbers = "0123456789";
+  const symbols = "!@#$%^&*_-+=|\?/><{}";
+
+  const passwordTxt = document.getElementById("password");
+  const length = document.getElementById("length");
+const incNumbers = document.getElementById("numbers");
+const incSymbols = document.getElementById("symbols");
+const generateBtn = document.getElementById("generate");
 
   return "make sure to replace this with the finalized random password";
 }
@@ -46,3 +56,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+let characters = alpha;
+  incNumbers.checked ? (characters += numbers) : "";
+  incSymbols.checked ? (characters += symbols) : "";
+  passwordTxt.value = generatePassword(length.value, characters);
+});
