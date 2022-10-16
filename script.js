@@ -40,9 +40,9 @@ function generatePassword() {
 
   const passwordTxt = document.getElementById("password");
   const length = document.getElementById("length");
-const incNumbers = document.getElementById("numbers");
-const incSymbols = document.getElementById("symbols");
-const generateBtn = document.getElementById("generate");
+  const incNumbers = document.getElementById("numbers");
+  const incSymbols = document.getElementById("symbols");
+  const generateBtn = document.getElementById("generate");
 
   return "make sure to replace this with the finalized random password";
 }
@@ -60,4 +60,3 @@ let characters = alpha;
   incNumbers.checked ? (characters += numbers) : "";
   incSymbols.checked ? (characters += symbols) : "";
   passwordTxt.value = generatePassword(length.value, characters);
-});
