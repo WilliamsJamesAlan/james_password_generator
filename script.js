@@ -60,3 +60,4 @@ let characters = alpha;
   incNumbers.checked ? (characters += numbers) : "";
   incSymbols.checked ? (characters += symbols) : "";
   passwordTxt.value = generatePassword(length.value, characters);
+/* Deleted line*/
